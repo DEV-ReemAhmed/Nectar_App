@@ -56,7 +56,9 @@ class Onbordingcon extends StatelessWidget {
           SizedBox(
             height: 60,
           ),
-          CustomButton(),
+          CustomButton(
+            text: 'Get started',
+          ),
           SizedBox(
             height: 100,
           ),
