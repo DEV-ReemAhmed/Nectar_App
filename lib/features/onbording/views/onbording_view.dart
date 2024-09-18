@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:nectar/features/onbording/widgets/custom_button.dart';
 
 class OnbordingView extends StatelessWidget {
@@ -23,7 +24,7 @@ class Onbordingcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(mainAxisAlignment: MainAxisAlignment.end, children: [
+    return Column(mainAxisAlignment: MainAxisAlignment.end, children: [
       Image(image: AssetImage('assets/images/logo.png')),
       SizedBox(
         height: 20,
@@ -58,6 +59,9 @@ class Onbordingcon extends StatelessWidget {
           ),
           CustomButton(
             text: 'Get started',
+            onTap: () {
+              GoRouter.of(context).push('/Login');
+            },
           ),
           SizedBox(
             height: 100,

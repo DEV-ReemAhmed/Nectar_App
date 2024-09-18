@@ -1,4 +1,6 @@
 import 'package:go_router/go_router.dart';
+import 'package:nectar/features/authentication/views/congrates_view.dart';
+import 'package:nectar/features/authentication/views/forget_password_view.dart';
 import 'package:nectar/features/onbording/views/onbording_view.dart';
 import 'package:nectar/features/authentication/views/Login_view.dart';
 import 'package:nectar/features/authentication/views/signUp_view.dart';
@@ -21,6 +23,14 @@ abstract class AppRouter {
     GoRoute(
       path: '/SignUp',
       builder: (context, state) => SignUpView(),
+    ),
+    GoRoute(
+      path: '/ForgetPassword',
+      builder: (context, state) => ForgetPasswordView(),
+    ),
+     GoRoute(
+      path: '/Congratulations',
+      builder: (context, state) => CongratesView(),
     ),
   ]);
 }

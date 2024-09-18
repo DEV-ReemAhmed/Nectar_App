@@ -89,7 +89,13 @@ class SignUpViewBody extends StatelessWidget {
         const SizedBox(
           height: 30,
         ),
-        const Center(child: CustomButton(text: 'SignUp')),
+        Center(
+            child: CustomButton(
+          text: 'SignUp',
+          onTap: () {
+            GoRouter.of(context).push('/SignUp');
+          },
+        )),
         const SizedBox(
           height: 20,
         ),

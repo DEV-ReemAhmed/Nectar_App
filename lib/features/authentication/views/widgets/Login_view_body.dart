@@ -54,18 +54,29 @@ class LoginViewBody extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
-        const Row(
+        Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            const Text(
-              'Forgot password?',
+            GestureDetector(
+              onTap: () {
+                GoRouter.of(context).push('/ForgetPassword');
+              },
+              child: Text(
+                'Forgot password?',
+              ),
             ),
           ],
         ),
         const SizedBox(
           height: 30,
         ),
-        const Center(child: CustomButton(text: 'Log in')),
+        Center(
+            child: CustomButton(
+          text: 'Log in',
+          onTap: () {
+            GoRouter.of(context).push('/Login');
+          },
+        )),
         const SizedBox(
           height: 20,
         ),

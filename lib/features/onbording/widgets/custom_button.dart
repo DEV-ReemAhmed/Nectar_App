@@ -3,14 +3,15 @@ import 'package:go_router/go_router.dart';
 import 'package:nectar/core/constants.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, required this.text});
+  CustomButton({super.key, required this.text, required this.onTap});
   final String text;
+  void Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        GoRouter.of(context).push('/Login');
-      },
+      onTap: onTap,
+
+
       child: Container(
         width: 330,
         height: 60,
