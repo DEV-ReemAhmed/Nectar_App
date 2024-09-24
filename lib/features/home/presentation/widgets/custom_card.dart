@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nectar/core/constants.dart';
-import 'package:nectar/features/home/views/widgets/custom_add_button.dart';
+import 'package:nectar/features/home/presentation/widgets/custom_add_button.dart';
 
 class CustomCard extends StatelessWidget {
   const CustomCard({super.key});

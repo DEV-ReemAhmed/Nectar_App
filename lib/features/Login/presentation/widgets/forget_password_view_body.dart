@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:nectar/core/utilies/app_images.dart';
 import 'package:nectar/core/utilies/app_styles.dart';
-import 'package:nectar/features/authentication/views/widgets/reset_password_sheet.dart';
+import 'package:nectar/features/Login/presentation/widgets/reset_password_sheet.dart';
 import 'package:nectar/core/utilies/widgets/custom_form_textField.dart';
 import 'package:nectar/core/utilies/widgets/custom_button.dart';
 

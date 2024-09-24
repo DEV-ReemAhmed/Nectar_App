@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:nectar/core/utilies/app_images.dart';
-import 'package:nectar/features/authentication/views/widgets/forget_password_view_body.dart';
+import 'package:nectar/features/Login/presentation/widgets/Login_view_body.dart';
+import 'package:nectar/features/singUp/presentation/widgets/signUp_view_body.dart';
 
-class ForgetPasswordView extends StatelessWidget {
-  const ForgetPasswordView({super.key});
+class SignUpView extends StatelessWidget {
+  const SignUpView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,7 @@ class ForgetPasswordView extends StatelessWidget {
             ),
             child: const Padding(
               padding: EdgeInsets.only(left: 16.0, right: 16),
-              child: ForgetPasswordViewBody(),
+              child: SignUpViewBody(),
             ),
           ),
         ));

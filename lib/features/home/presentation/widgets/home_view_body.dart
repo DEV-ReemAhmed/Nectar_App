@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nectar/core/constants.dart';
-import 'package:nectar/features/home/views/widgets/custom_card.dart';
-import 'package:nectar/features/home/views/widgets/custom_search_text_field.dart';
+import 'package:nectar/features/home/presentation/widgets/custom_card.dart';
+import 'package:nectar/features/home/presentation/widgets/custom_search_text_field.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});

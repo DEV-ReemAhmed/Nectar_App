@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:go_router/go_router.dart';
 import 'package:nectar/core/constants.dart';
 import 'package:nectar/core/utilies/app_styles.dart';
-import 'package:nectar/features/authentication/views/widgets/pin_code_field.dart';
-import 'package:nectar/features/authentication/views/widgets/reset_password_sheet_con.dart';
+import 'package:nectar/features/Login/presentation/views/congrates_view.dart';
+import 'package:nectar/core/utilies/widgets/custom_form_textField.dart';
 import 'package:nectar/core/utilies/widgets/custom_button.dart';
 
-class ResetPasswordSheet extends StatelessWidget {
-  ResetPasswordSheet({super.key});
+class ResetPasswordSheetCon extends StatelessWidget {
+  ResetPasswordSheetCon({super.key});
   final GlobalKey<FormState> formKey = GlobalKey();
 
   @override
@@ -17,11 +17,12 @@ class ResetPasswordSheet extends StatelessWidget {
       child: Form(
         key: formKey,
         child: Container(
-          height: MediaQuery.of(context).size.height / 2.1,
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(50)),
+          height: MediaQuery.of(context).size.height / 1.6,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
+              const Text(
                 'Reset Password',
                 style: Styles.Text26,
               ),
@@ -29,7 +30,7 @@ class ResetPasswordSheet extends StatelessWidget {
                 height: 15,
               ),
               Text(
-                'Enter the code that was sent to your email address',
+                'Enter new password to your account to reset password',
                 style: Styles.Text16.copyWith(
                     fontFamily: 'Gilroy-Medium', fontWeight: FontWeight.w400),
               ),
@@ -37,30 +38,32 @@ class ResetPasswordSheet extends StatelessWidget {
                 height: 30,
               ),
               Text(
-                'Enter the 6 digits code',
+                'Email',
                 style: Styles.Text16.copyWith(
-                  fontFamily: 'Gilroy-Medium',
+                    fontWeight: FontWeight.w600, fontFamily: 'Normal'),
+              ),
+              CustomFormTextField(),
+              Text(
+                'Password',
+                style: Styles.Text16.copyWith(
+                  fontWeight: FontWeight.w600,
+                  fontFamily: 'Normal',
                 ),
               ),
-              const SizedBox(
-                height: 30,
+              CustomFormTextField(),
+              Text(
+                'Confirm Password',
+                style: Styles.Text16.copyWith(
+                  fontWeight: FontWeight.w600,
+                  fontFamily: 'Normal',
+                ),
               ),
-              const PinCodeField(),
-              const SizedBox(
-                height: 30,
-              ),
+              CustomFormTextField(),
               Center(
                 child: CustomButton(
-                  text: 'Send Code',
+                  text: 'Reset Password',
                   onTap: () {
-                    showBottomSheet(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(16),
-                        ),
-                        context: context,
-                        builder: (context) {
-                          return ResetPasswordSheetCon();
-                        });
+                    GoRouter.of(context).push('/Congrates');
                   },
                 ),
               ),

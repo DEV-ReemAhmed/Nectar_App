@@ -1,9 +1,9 @@
 import 'package:go_router/go_router.dart';
-import 'package:nectar/features/authentication/views/congrates_view.dart';
-import 'package:nectar/features/authentication/views/forget_password_view.dart';
-import 'package:nectar/features/home/views/home_view.dart';
-import 'package:nectar/features/onbording/views/onbording_view.dart';
-import 'package:nectar/features/authentication/views/Login_view.dart';
+import 'package:nectar/features/Login/presentation/views/congrates_view.dart';
+import 'package:nectar/features/Login/presentation/views/forget_password_view.dart';
+import 'package:nectar/features/home/presentation/views/home_view.dart';
+import 'package:nectar/features/onbording/presentation/views/onbording_view.dart';
+import 'package:nectar/features/Login/presentation/views/Login_view.dart';
 import 'package:nectar/features/authentication/views/signUp_view.dart';
 import 'package:nectar/features/splash/presentation/views/splash_view.dart';
 

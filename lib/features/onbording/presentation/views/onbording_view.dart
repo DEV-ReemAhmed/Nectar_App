@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nectar/core/utilies/app_images.dart';
-import 'package:nectar/features/onbording/widgets/onBording_view_body.dart';
+import 'package:nectar/features/onbording/presentation/widgets/onBording_view_body.dart';
 
 class OnboardingView extends StatelessWidget {
   const OnboardingView({super.key});

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:nectar/core/utilies/app_images.dart';
-import 'package:nectar/features/authentication/views/widgets/Login_view_body.dart';
-import 'package:nectar/features/authentication/views/widgets/signUp_view_body.dart';
+import 'package:nectar/features/Login/presentation/widgets/Login_view_body.dart';
 
-class SignUpView extends StatelessWidget {
-  const SignUpView({super.key});
+class LoginView extends StatelessWidget {
+  const LoginView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class SignUpView extends StatelessWidget {
             ),
             child: const Padding(
               padding: EdgeInsets.only(left: 16.0, right: 16),
-              child: SignUpViewBody(),
+              child: LoginViewBody(),
             ),
           ),
         ));
