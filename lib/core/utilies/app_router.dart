@@ -5,7 +5,7 @@ import 'package:nectar/features/home/views/home_view.dart';
 import 'package:nectar/features/onbording/views/onbording_view.dart';
 import 'package:nectar/features/authentication/views/Login_view.dart';
 import 'package:nectar/features/authentication/views/signUp_view.dart';
-import 'package:nectar/features/splash/views/splash_view.dart';
+import 'package:nectar/features/splash/presentation/views/splash_view.dart';
 
 abstract class AppRouter {
   static const kBoarding = '/OnBoarding';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nectar/core/utilies/app_router.dart';
-import 'package:nectar/features/splash/views/splash_view.dart';
+import 'package:nectar/features/splash/presentation/views/splash_view.dart';
 
 void main() {
   runApp(const Nectar());
