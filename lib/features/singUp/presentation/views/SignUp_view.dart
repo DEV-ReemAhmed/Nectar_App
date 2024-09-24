@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:nectar/core/utilies/app_images.dart';
-import 'package:nectar/features/Login/presentation/widgets/Login_view_body.dart';
 import 'package:nectar/features/singUp/presentation/widgets/signUp_view_body.dart';
 
 class SignUpView extends StatelessWidget {

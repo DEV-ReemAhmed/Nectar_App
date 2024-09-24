@@ -4,7 +4,7 @@ import 'package:nectar/features/Login/presentation/views/forget_password_view.da
 import 'package:nectar/features/home/presentation/views/home_view.dart';
 import 'package:nectar/features/onbording/presentation/views/onbording_view.dart';
 import 'package:nectar/features/Login/presentation/views/Login_view.dart';
-import 'package:nectar/features/authentication/views/signUp_view.dart';
+import 'package:nectar/features/singUp/presentation/views/SignUp_view.dart';
 import 'package:nectar/features/splash/presentation/views/splash_view.dart';
 
 abstract class AppRouter {

@@ -5,6 +5,7 @@ import 'package:nectar/core/utilies/app_images.dart';
 import 'package:nectar/core/utilies/app_styles.dart';
 import 'package:nectar/core/utilies/widgets/custom_form_textField.dart';
 import 'package:nectar/core/utilies/widgets/custom_button.dart';
+import 'package:nectar/core/utilies/widgets/custom_password_textField.dart';
 
 class SignUpViewBody extends StatelessWidget {
   const SignUpViewBody({super.key});
@@ -51,7 +52,7 @@ class SignUpViewBody extends StatelessWidget {
           style: Styles.Text16.copyWith(
               fontWeight: FontWeight.w600, fontFamily: 'Normal'),
         ),
-        CustomFormTextField(),
+        CustomPasswordTextField(),
         Row(
           children: [
             Text(

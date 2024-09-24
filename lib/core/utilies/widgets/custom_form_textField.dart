@@ -1,23 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:nectar/core/constants.dart';
 
 class CustomFormTextField extends StatelessWidget {
-  CustomFormTextField({this.hintText});
-  String? hintText;
+  CustomFormTextField();
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      decoration: InputDecoration(
-        hintText: hintText,
-        hintStyle:
-            const TextStyle(color: const Color.fromARGB(255, 204, 202, 202)),
-        enabledBorder: const OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.grey),
-        ),
-        focusedBorder: const OutlineInputBorder(
-          borderSide: BorderSide(color: Color(0xffC7EDE6)),
-        ),
-        border: const OutlineInputBorder(
+      cursorColor: KPrimaryColor,
+      cursorHeight: 25,
+      decoration: const InputDecoration(
+        enabledBorder:  OutlineInputBorder(
           borderSide: BorderSide(color: Colors.white),
+        ),
+        focusedBorder:  OutlineInputBorder(
+          borderSide: BorderSide(color: KPrimaryColor),
         ),
       ),
     );

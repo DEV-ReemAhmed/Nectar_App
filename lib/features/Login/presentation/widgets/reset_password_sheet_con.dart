@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:nectar/core/constants.dart';
 import 'package:nectar/core/utilies/app_styles.dart';
-import 'package:nectar/features/Login/presentation/views/congrates_view.dart';
 import 'package:nectar/core/utilies/widgets/custom_form_textField.dart';
 import 'package:nectar/core/utilies/widgets/custom_button.dart';
+import 'package:nectar/core/utilies/widgets/custom_password_textField.dart';
 
 class ResetPasswordSheetCon extends StatelessWidget {
   ResetPasswordSheetCon({super.key});
@@ -50,7 +49,7 @@ class ResetPasswordSheetCon extends StatelessWidget {
                   fontFamily: 'Normal',
                 ),
               ),
-              CustomFormTextField(),
+              const CustomPasswordTextField(),
               Text(
                 'Confirm Password',
                 style: Styles.Text16.copyWith(
@@ -58,7 +57,10 @@ class ResetPasswordSheetCon extends StatelessWidget {
                   fontFamily: 'Normal',
                 ),
               ),
-              CustomFormTextField(),
+              const CustomPasswordTextField(),
+              const SizedBox(
+                height: 20,
+              ),
               Center(
                 child: CustomButton(
                   text: 'Reset Password',
