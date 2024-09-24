@@ -29,7 +29,7 @@ class _CustomPasswordTextFieldState extends State<CustomPasswordTextField> {
               color: Colors.grey,
             )),
         enabledBorder: const OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.white),
+          borderSide: BorderSide(color: Color.fromARGB(255, 212, 207, 207)),
         ),
         focusedBorder: const OutlineInputBorder(
           borderSide: BorderSide(color: KPrimaryColor),

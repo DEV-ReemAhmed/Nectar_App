@@ -9,10 +9,10 @@ class CustomFormTextField extends StatelessWidget {
       cursorColor: KPrimaryColor,
       cursorHeight: 25,
       decoration: const InputDecoration(
-        enabledBorder:  OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.white),
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: Color.fromARGB(255, 212, 207, 207)),
         ),
-        focusedBorder:  OutlineInputBorder(
+        focusedBorder: OutlineInputBorder(
           borderSide: BorderSide(color: KPrimaryColor),
         ),
       ),
