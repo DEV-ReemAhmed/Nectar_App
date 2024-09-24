@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:nectar/core/constants.dart';
-import 'package:nectar/features/authentication/views/widgets/custom_form_textField.dart';
-import 'package:nectar/features/onbording/widgets/custom_button.dart';
+import 'package:nectar/core/utilies/app_images.dart';
+import 'package:nectar/core/utilies/app_styles.dart';
+import 'package:nectar/core/utilies/widgets/custom_form_textField.dart';
+import 'package:nectar/core/utilies/widgets/custom_button.dart';
 
 class SignUpViewBody extends StatelessWidget {
   const SignUpViewBody({super.key});
@@ -16,73 +18,75 @@ class SignUpViewBody extends StatelessWidget {
         const SizedBox(
           height: 100,
         ),
-        Center(child: Image.asset('assets/images/carrot.png')),
+        Center(child: Image.asset(AppImages.coloredCarrot)),
         const SizedBox(
           height: 50,
         ),
         const Text(
           'Sign Up',
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+          style: Styles.Text26,
         ),
         const SizedBox(
           height: 10,
         ),
         Text(
           'Enter your credentials to continue',
-          style: TextStyle(color: Colors.grey),
+          style: Styles.Text16.copyWith(fontFamily: 'Gilroy-Medium'),
         ),
         CustomFormTextField(),
-        // const SizedBox(
-        //   height: 10,
-        // ),
         Text(
           'Username',
-          style: TextStyle(
-              fontSize: 18, color: Colors.grey, fontWeight: FontWeight.w500),
+          style: Styles.Text16.copyWith(
+              fontWeight: FontWeight.w600, fontFamily: 'Normal'),
         ),
         CustomFormTextField(),
-        // const SizedBox(
-        //   height: 30,
-        // ),
-        const Text(
+        Text(
           'Email',
-          style: TextStyle(
-              fontSize: 18, color: Colors.grey, fontWeight: FontWeight.w500),
+          style: Styles.Text16.copyWith(
+              fontWeight: FontWeight.w600, fontFamily: 'Normal'),
         ),
         CustomFormTextField(),
-        // const SizedBox(
-        //   height: 20,
-        // ),
-        const Text(
+        Text(
           'Password',
-          style: TextStyle(
-              fontSize: 18, color: Colors.grey, fontWeight: FontWeight.w500),
+          style: Styles.Text16.copyWith(
+              fontWeight: FontWeight.w600, fontFamily: 'Normal'),
         ),
         CustomFormTextField(),
         Row(
           children: [
-            const Text(
+            Text(
               'By continuing you agree to our ',
-              style: TextStyle(fontSize: 13, color: Colors.grey),
+              style: Styles.Text14.copyWith(
+                  fontSize: 13,
+                  fontWeight: FontWeight.w600,
+                  fontFamily: 'Gilroy-Medium'),
             ),
-            const Text(
+            Text(
               'Terms of Service',
-              style: TextStyle(
-                color: KPrimaryColor,
-                fontSize: 12,
-              ),
+              style: Styles.Text14.copyWith(
+                  fontSize: 13,
+                  color: KPrimaryColor,
+                  fontWeight: FontWeight.w600,
+                  fontFamily: 'Gilroy-Medium'),
             ),
           ],
         ),
         Row(
           children: [
-            const Text(
+            Text(
               'and ',
-              style: TextStyle(fontSize: 13, color: Colors.grey),
+              style: Styles.Text14.copyWith(
+                  fontSize: 13,
+                  fontWeight: FontWeight.w600,
+                  fontFamily: 'Gilroy-Medium'),
             ),
-            const Text(
+            Text(
               'Privacy Policy',
-              style: TextStyle(color: KPrimaryColor, fontSize: 13),
+              style: Styles.Text14.copyWith(
+                  fontSize: 13,
+                  color: KPrimaryColor,
+                  fontWeight: FontWeight.w600,
+                  fontFamily: 'Gilroy-Medium'),
             ),
           ],
         ),
@@ -102,15 +106,19 @@ class SignUpViewBody extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Already have an acount? "),
+            Text(
+              "Already have an acount? ",
+              style: Styles.Text14.copyWith(
+                  fontFamily: 'Gilroy-Medium', color: Colors.black),
+            ),
             GestureDetector(
               onTap: () {
                 GoRouter.of(context).push('/Login');
               },
               child: Text(
                 'Login',
-                style: TextStyle(
-                    color: KPrimaryColor, fontWeight: FontWeight.w400),
+                style: Styles.Text14.copyWith(
+                    fontFamily: 'Gilroy-Medium', color: KPrimaryColor),
               ),
             ),
           ],

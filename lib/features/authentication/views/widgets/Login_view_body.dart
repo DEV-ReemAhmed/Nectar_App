@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 import 'package:nectar/core/constants.dart';
-import 'package:nectar/features/onbording/widgets/custom_button.dart';
-import 'package:nectar/features/authentication/views/widgets/custom_form_textField.dart';
+import 'package:nectar/core/utilies/app_images.dart';
+import 'package:nectar/core/utilies/app_styles.dart';
+import 'package:nectar/core/utilies/widgets/custom_button.dart';
+import 'package:nectar/core/utilies/widgets/custom_form_textField.dart';
 
 class LoginViewBody extends StatelessWidget {
   const LoginViewBody({super.key});
@@ -17,20 +19,20 @@ class LoginViewBody extends StatelessWidget {
         const SizedBox(
           height: 100,
         ),
-        Center(child: Image.asset('assets/images/carrot.png')),
+        Center(child: Image.asset(AppImages.coloredCarrot)),
         const SizedBox(
           height: 50,
         ),
         const Text(
           'Loging',
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+          style: Styles.Text26,
         ),
         const SizedBox(
           height: 10,
         ),
         Text(
           'Enter your Email and password',
-          style: TextStyle(color: Colors.grey),
+          style: Styles.Text16.copyWith(fontFamily: 'Gilroy-Medium'),
         ),
         CustomFormTextField(),
         const SizedBox(
@@ -38,17 +40,17 @@ class LoginViewBody extends StatelessWidget {
         ),
         Text(
           'Email',
-          style: TextStyle(
-              fontSize: 18, color: Colors.grey, fontWeight: FontWeight.w500),
+          style: Styles.Text16.copyWith(
+              fontWeight: FontWeight.w600, fontFamily: 'Normal'),
         ),
         CustomFormTextField(),
         const SizedBox(
           height: 30,
         ),
-        const Text(
+        Text(
           'Password',
-          style: TextStyle(
-              fontSize: 18, color: Colors.grey, fontWeight: FontWeight.w500),
+          style: Styles.Text16.copyWith(
+              fontWeight: FontWeight.w600, fontFamily: 'Normal'),
         ),
         CustomFormTextField(),
         const SizedBox(
@@ -59,10 +61,12 @@ class LoginViewBody extends StatelessWidget {
           children: [
             GestureDetector(
               onTap: () {
-                GoRouter.of(context).push('/ForgetPassword');
+                GoRouter.of(context).push('/ForgetPass');
               },
               child: Text(
                 'Forgot password?',
+                style: Styles.Text14.copyWith(
+                    fontFamily: 'Gilroy-Medium', color: Colors.black),
               ),
             ),
           ],
@@ -74,7 +78,7 @@ class LoginViewBody extends StatelessWidget {
             child: CustomButton(
           text: 'Log in',
           onTap: () {
-            GoRouter.of(context).push('/Login');
+            GoRouter.of(context).push('/HomeView');
           },
         )),
         const SizedBox(
@@ -83,15 +87,19 @@ class LoginViewBody extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Don't have an acount? "),
+            Text(
+              "Don't have an acount? ",
+              style: Styles.Text14.copyWith(
+                  fontFamily: 'Gilroy-Medium', color: Colors.black),
+            ),
             GestureDetector(
               onTap: () {
                 GoRouter.of(context).push('/SignUp');
               },
               child: Text(
                 'SignUp',
-                style: TextStyle(
-                    color: KPrimaryColor, fontWeight: FontWeight.w400),
+                style: Styles.Text14.copyWith(
+                    fontFamily: 'Gilroy-Medium', color: KPrimaryColor),
               ),
             ),
           ],

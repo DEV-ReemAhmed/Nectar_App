@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nectar/core/constants.dart';
 import 'package:go_router/go_router.dart';
+import 'package:nectar/core/utilies/app_images.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
@@ -13,7 +14,7 @@ class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
     Future.delayed(const Duration(seconds: 2), () {
-      GoRouter.of(context).push('/OnBording');
+      GoRouter.of(context).pushReplacement('/OnBoarding');
     });
 
     super.initState();
@@ -31,23 +32,13 @@ class _SplashViewState extends State<SplashView> {
       body: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset('assets/images/logo.png'),
-          const SizedBox(
-            width: 10,
-          ),
-          const Column(
+          Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                'nectar',
-                style: TextStyle(fontSize: 60, color: Colors.white),
-              ),
-              Text(
-                'o n l i n e   g r o c e r i e t',
-                style: TextStyle(
-                  fontSize: 14,
-                  color: Colors.white,
-                ),
+              Image.asset(
+                AppImages.splashImg,
+                width: 280.42,
+                height: 70.61,
               ),
             ],
           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nectar/core/utilies/app_images.dart';
 import 'package:nectar/features/authentication/views/widgets/forget_password_view_body.dart';
 
 class ForgetPasswordView extends StatelessWidget {
@@ -12,7 +13,7 @@ class ForgetPasswordView extends StatelessWidget {
           child: Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/images/backSignLogin.png'),
+                image: AssetImage(AppImages.backLogSign),
                 fit: BoxFit.cover,
               ),
             ),

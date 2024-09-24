@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:nectar/core/constants.dart';
+import 'package:nectar/core/utilies/app_styles.dart';
 import 'package:nectar/features/authentication/views/widgets/pin_code_field.dart';
 import 'package:nectar/features/authentication/views/widgets/reset_password_sheet_con.dart';
-import 'package:nectar/features/onbording/widgets/custom_button.dart';
+import 'package:nectar/core/utilies/widgets/custom_button.dart';
 
 class ResetPasswordSheet extends StatelessWidget {
   ResetPasswordSheet({super.key});
@@ -20,20 +21,26 @@ class ResetPasswordSheet extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
+              Text(
                 'Reset Password',
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+                style: Styles.Text26,
               ),
               const SizedBox(
                 height: 15,
               ),
-              const Text('Enter the code sent to your Email address'),
+              Text(
+                'Enter the code that was sent to your email address',
+                style: Styles.Text16.copyWith(
+                    fontFamily: 'Gilroy-Medium', fontWeight: FontWeight.w400),
+              ),
               const SizedBox(
                 height: 30,
               ),
-              const Text(
-                'Enter the 6 code digits',
-                style: TextStyle(fontWeight: FontWeight.w500),
+              Text(
+                'Enter the 6 digits code',
+                style: Styles.Text16.copyWith(
+                  fontFamily: 'Gilroy-Medium',
+                ),
               ),
               const SizedBox(
                 height: 30,

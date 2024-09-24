@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nectar/core/utilies/app_images.dart';
 import 'package:nectar/features/authentication/views/widgets/Login_view_body.dart';
 import 'package:nectar/features/authentication/views/widgets/signUp_view_body.dart';
 
@@ -13,7 +14,7 @@ class SignUpView extends StatelessWidget {
           child: Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/images/backSignLogin.png'),
+                image: AssetImage(AppImages.backLogSign),
                 fit: BoxFit.cover,
               ),
             ),

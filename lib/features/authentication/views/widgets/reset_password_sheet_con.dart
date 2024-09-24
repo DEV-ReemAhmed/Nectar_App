@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:nectar/core/constants.dart';
+import 'package:nectar/core/utilies/app_styles.dart';
 import 'package:nectar/features/authentication/views/congrates_view.dart';
-import 'package:nectar/features/authentication/views/widgets/custom_form_textField.dart';
-import 'package:nectar/features/onbording/widgets/custom_button.dart';
+import 'package:nectar/core/utilies/widgets/custom_form_textField.dart';
+import 'package:nectar/core/utilies/widgets/custom_button.dart';
 
 class ResetPasswordSheetCon extends StatelessWidget {
   ResetPasswordSheetCon({super.key});
@@ -22,45 +24,46 @@ class ResetPasswordSheetCon extends StatelessWidget {
             children: [
               const Text(
                 'Reset Password',
-                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+                style: Styles.Text26,
               ),
               const SizedBox(
                 height: 15,
               ),
-              const Text(
-                  'Enter new password to your account to reset password'),
+              Text(
+                'Enter new password to your account to reset password',
+                style: Styles.Text16.copyWith(
+                    fontFamily: 'Gilroy-Medium', fontWeight: FontWeight.w400),
+              ),
               const SizedBox(
                 height: 30,
               ),
-              const Text(
+              Text(
                 'Email',
-                style: TextStyle(
-                    fontSize: 18,
-                    color: Colors.grey,
-                    fontWeight: FontWeight.w500),
+                style: Styles.Text16.copyWith(
+                    fontWeight: FontWeight.w600, fontFamily: 'Normal'),
               ),
               CustomFormTextField(),
-              const Text(
+              Text(
                 'Password',
-                style: TextStyle(
-                    fontSize: 18,
-                    color: Colors.grey,
-                    fontWeight: FontWeight.w500),
+                style: Styles.Text16.copyWith(
+                  fontWeight: FontWeight.w600,
+                  fontFamily: 'Normal',
+                ),
               ),
               CustomFormTextField(),
-              const Text(
+              Text(
                 'Confirm Password',
-                style: TextStyle(
-                    fontSize: 18,
-                    color: Colors.grey,
-                    fontWeight: FontWeight.w500),
+                style: Styles.Text16.copyWith(
+                  fontWeight: FontWeight.w600,
+                  fontFamily: 'Normal',
+                ),
               ),
               CustomFormTextField(),
               Center(
                 child: CustomButton(
                   text: 'Reset Password',
                   onTap: () {
-                    GoRouter.of(context).push('/Congratulations');
+                    GoRouter.of(context).push('/Congrates');
                   },
                 ),
               ),
